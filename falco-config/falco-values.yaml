@@ -1,1 +1,26 @@
-#test
+collectors:
+  containerd:
+    socket: /var/snap/microk8s/common/run/containerd.sock
+driver:
+  kind: ebpf
+falco:
+  json_output: true
+  json_include_output_property: true
+  http_output:
+    enabled: true
+    url: "http://falco-falcosidekick:2801/"
+falcosidekick:
+  enabled: true
+  webui:
+    enabled: true
+    service:
+      type: NodePort
+falcoctl:
+  config:
+    indexes: [{"name":"falcosecurity","url":"https://falcosecurity.github.io/falcoctl/index.yaml"}, {"name":"my-falco-rules","url":"https://raw.githubusercontent.com/ab357935793/falco-demos/main/my-falcoctl-index/index.yaml"}]
+    artifact:
+      follow:
+        refs: ["falco-rules:0","my-falco-rules"]
+      install:
+        refs: ["falco-rules:0","my-falco-rules"]
+tty: true
