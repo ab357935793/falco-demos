@@ -1,0 +1,14 @@
+- name: my-falco-rules
+  type: rulesfile
+  registry: ghcr.io
+  repository: falcosecurity/rules/falco-rules
+  description: My Custom Falco Rules
+  home: https://github.com/ab357935793/falco-demos/tree/main/my-falco-rules/falco_rules.local.yaml
+  keywords:
+    - falco-rules
+  license: apache-2.0
+  maintainers:
+    - email: noreply@noreply
+      name: ab357935793
+  sources:
+    - https://github.com/ab357935793/falco-demos/tree/main/my-falco-rules/falco_rules.local.yaml
