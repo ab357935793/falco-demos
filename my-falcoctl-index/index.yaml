@@ -5,7 +5,7 @@
   description: My Custom Falco Rules
   home: https://github.com/ab357935793/falco-demos/tree/main/my-falco-rules/falco_rules.local.yaml
   keywords:
-    - falco-rules
+    - my-falco-rules
   license: apache-2.0
   maintainers:
     - email: noreply@noreply
